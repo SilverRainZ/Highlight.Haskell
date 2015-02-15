@@ -1,6 +1,21 @@
-keyword = abstract continue for new switch assert default goto package synchronized boolean do if private this break double implements protected throw byte else import public throws case enum instanceof return transient catch extends int short try char final interface static void class finally long strictfp volatile const float native super while false null true;(red)
-blkcomment = /* */;(green)
-linecomment = //;(green)
-linecomment = @;(gray)
-macro = # \;(red)
+/\*(.|\n)*\*/
+//.*
+#.*
+"([^"]|\\")*"
+\b\w+\b\(.*\)
+abstract|continue|for|new|switch|assert|default|goto|package|synchronized|boolean|do|if|private|this|break|double|implements|protected|throw|byte|else|import|public|throws|case|enum|instanceof|return|transient|catch|extends|int|short|try|char|final|interface|static|void|class|finally|long|strictfp|volatile|const|float|native|super|while|true|false|null
+Gray
+Gray
+Red
+Green
+Purple
+Blue
+
+usage:
+    1: blkcomment
+    2: linecomment
+    3: macro
+    4: string
+    5: function
+    6: keyword
 
